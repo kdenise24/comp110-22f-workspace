@@ -5,10 +5,10 @@ Instances: int = 0
 five_character_word: str = input("Enter a 5-character word: ")
 
 if len(five_character_word) > 5:
-    print("Error: Word must contain 5 character")
+    print("Error: Word must contain 5 characters")
     print(exit())
 if len(five_character_word) < 5:
-    print("Error: Word must contain 5 character")
+    print("Error: Word must contain 5 characters")
     print(exit())
 
 single_character: str = input("Enter a single character: ")
