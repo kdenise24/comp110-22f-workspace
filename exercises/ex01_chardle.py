@@ -15,7 +15,7 @@ single_character: str = input("Enter a single character: ")
 if len(single_character) > 1:
     print("Error: Character must be a single character.")
     print(exit())
-if len(five_character_word) < 1:
+if len(single_character) < 1:
     print("Error: Character must be a single character.")
     print(exit())
 
