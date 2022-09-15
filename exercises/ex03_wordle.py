@@ -1,8 +1,9 @@
-"""EX03 - Structured Wordle"""
+"""EX03 - Structured Wordle."""
 __author__ = "730566062"
 
+
 def contains_char(str_input: str, searched_for: str) -> bool:
-    """returns a true or false is the single character string is found in the string of any length"""
+    """Returns a true or false is the single character string is found in the string of any length."""
     assert len(searched_for) == 1
     i: int = 0
     while i < len(str_input):
@@ -11,12 +12,14 @@ def contains_char(str_input: str, searched_for: str) -> bool:
         i = i + 1
     return False
 
+
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
+
 def emojified(secret: str, guess: str) -> str:
-    """returns a string of emojis corresponding with the correctness of guess."""
+    """Returns a string of emojis corresponding with the correctness of guess."""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C"
     GREEN_BOX: str = "\U0001F7E9"
@@ -34,14 +37,16 @@ def emojified(secret: str, guess: str) -> str:
         i = i + 1
     return emoji
 
+
 def input_guess(expected_length: int) -> str:
-    """takes the input and insures that the input is the right length"""
+    """Takes the input and insures that the input is the right length."""
     word_input: str = input("Enter a " + str(expected_length) + " character word: ")
     while len(word_input) > expected_length:
         word_input = input("That wasn't " + str(expected_length) +" chars! Try again: ")
     while len(word_input) < expected_length:
         word_input = input("That wasn't " + str(expected_length) +" chars! Try again: ")
     return word_input
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -63,6 +68,6 @@ def main() -> None:
                 print(emojis)
         numberof_turns = numberof_turns + 1
 
+
 if __name__ == "__main__":
     main()
-
