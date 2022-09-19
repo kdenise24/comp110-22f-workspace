@@ -4,11 +4,14 @@ __author__ = "730566062"
 def all(list_ofints: (list[int]), single: int):
     """given the list and the single int, returns a bool if they are equal"""
     i: int = 0
+    if len(list_ofints) == 0:
+        return False
     while i < len(list_ofints):
         if list_ofints[i] != single:
             return False
         i = i + 1
     return True
+
 
 def max(input: list[int]) -> int:
     """given the lis, returns the max value/int"""
@@ -22,10 +25,6 @@ def max(input: list[int]) -> int:
                 largest = input[1]
             i = i + 1
         return largest
-
-
-
-
 
 
 def is_equal(first_list: list[int], second_list: list[int]):
